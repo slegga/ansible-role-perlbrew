@@ -8,16 +8,21 @@
   with_items:
     - bzip2
     - perl-Test-Pod
+  become: true
 
 - name: Install CentOS Development tools
   yum:
     name: "@Development tools"
     state: installed
+  become: true
 
 - name: Create perlbrew root
   file:
     path: "{{ perlbrew_root }}"
     state: directory
+    owner: stein
+    mode: 0755
+  become: true
 
 - name: Fetch perlbrew
   get_url:
