@@ -64,7 +64,7 @@
 - name: install perl modules
   cpanm:
     name: "{{ item[0] }}"
-    locallib: "{{ perlbrew_root }}/perls/{{ item[1] }}/lib"
+#    locallib: "{{ perlbrew_root }}/perls/{{ item[1] }}/lib"
     version: "999.9"
   with_nested: 
     - "{{ perlmodules }}"
