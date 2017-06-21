@@ -1,7 +1,6 @@
 ---
 # vars file for ansible-perlbrew/
 perlmodules:
-  - App::perlbrew
   - Digest::MD5
   - Compress::Raw::Zlib
   - EV
