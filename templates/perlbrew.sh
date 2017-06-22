@@ -1,4 +1,4 @@
-pathmunge  /opt/perl5/bin
-export PERLBREW_ROOT=/opt/perl5
+pathmunge  {{ perlbrew_root }}/bin
+export PERLBREW_ROOT={{ perlbrew_root }}
 source ${PERLBREW_ROOT}/etc/bashrc
 perlbrew switch {{ default_perl }}

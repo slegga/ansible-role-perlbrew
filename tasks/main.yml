@@ -59,15 +59,14 @@
     src: perlbrew.sh
     dest: /etc/profile.d/perlbrew.sh
   become: true
-  become_user: "{{ perlbrew_user }}"
 
 - name: install perl modules
   cpanm:
-    name: "{{ item[0] }}"
+    name: "{{ item }}"
 #    locallib: "{{ perlbrew_root }}/perls/{{ item[1] }}/lib"
     version: "999.9"
-  with_nested: 
-    - "{{ perlmodules }}"
-    - "{{ perls }}"
+    #  with_nested: 
+  with_items: "{{ perlmodules }}"
+#    - "{{ perls }}"
   become: true
-  become_user: "{{ perlbrew_user}}"
+  become_user: "{{ perlbrew_user }}"

@@ -1,4 +1,7 @@
 ---
+# some how I cant manage to change from /opt/perl5 library.
+# It looks like perlbrew has hardcoded this.
+
 # defaults file for ansible-perlbrew/
 perlbrew_root: /opt/perl5
 
@@ -7,3 +10,4 @@ perls:
   - "{{ default_perl }}"
 
 perlbrew_notest: False
+
