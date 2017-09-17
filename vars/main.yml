@@ -17,4 +17,4 @@ perlmodules:
   - HTML::TextToHTML
   - autodie
   - Git::Repository
-
+  - Mojolicious::Plugin::RemoteAddr
