@@ -19,4 +19,4 @@ perlmodules:
   - Git::Repository
   - NetAddr::IP
   - App::Ack
-
+  - Mojolicious::Plugin::RemoteAddr
