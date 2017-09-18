@@ -17,4 +17,6 @@ perlmodules:
   - HTML::TextToHTML
   - autodie
   - Git::Repository
+  - NetAddr::IP
+  - App::Ack
 
