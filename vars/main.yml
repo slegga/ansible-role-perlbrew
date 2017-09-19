@@ -20,3 +20,5 @@ perlmodules:
   - NetAddr::IP
   - App::Ack
   - Mojolicious::Plugin::RemoteAddr
+  - Clone
+
