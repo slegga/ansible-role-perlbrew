@@ -20,7 +20,7 @@ Like this:
 
 =cut
 
-my $yaml = YAML::LoadFile("$ENV{HOME}/git/ansible-cloudatcost/roles/yum/vars/main.yml");
+my $yaml = YAML::LoadFile("$ENV{HOME}/git/ansible-perlbrew/vars/main.yml");
 for my $val (@{$yaml->{perlmodules}}) {
 	say $val;
 }
