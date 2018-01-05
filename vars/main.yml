@@ -21,4 +21,5 @@ perlmodules:
   - App::Ack
   - Mojolicious::Plugin::RemoteAddr
   - Clone
+  - MIDI
 
