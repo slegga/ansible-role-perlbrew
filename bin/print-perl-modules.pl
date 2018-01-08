@@ -1,5 +1,5 @@
 #!/usr/bin/env perl
-use YAML qw /LoadFile/;
+use CPAN::Meta::YAML qw /LoadFile/;
 use warnings;
 use strict;
 use autodie;
@@ -20,7 +20,7 @@ Like this:
 
 =cut
 
-my $yaml = YAML::LoadFile("$ENV{HOME}/git/ansible-perlbrew/vars/main.yml");
+my $yaml = CPAN::Meta::YAML::LoadFile("$ENV{HOME}/git/ansible-perlbrew/vars/main.yml");
 for my $val (@{$yaml->{perlmodules}}) {
 	say $val;
 }
