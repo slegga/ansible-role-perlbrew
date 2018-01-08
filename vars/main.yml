@@ -22,4 +22,10 @@ perlmodules:
   - Mojolicious::Plugin::RemoteAddr
   - Clone
   - MIDI
-
+  - Test::Compile
+  - Getopt::Long::Descriptive
+  - Term::ReadKey
+  - Carp::Always
+perlforcemodules:
+  - List::MoreUtils
+  

@@ -24,3 +24,7 @@ my $yaml = CPAN::Meta::YAML::LoadFile("$ENV{HOME}/git/ansible-perlbrew/vars/main
 for my $val (@{$yaml->{perlmodules}}) {
 	say $val;
 }
+say "#installed with force";
+for my $val (@{$yaml->{perlforcemodules}}) { # utf8 AB before AA
+	say $val;
+}
