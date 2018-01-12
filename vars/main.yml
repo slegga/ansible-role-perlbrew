@@ -22,4 +22,12 @@ perlmodules:
   - Mojolicious::Plugin::RemoteAddr
   - Clone
   - MIDI
-
+  - YAML::Tiny
+  - MIME::Parser
+  - Readonly
+  - Mojolicious::Plugin::OpenAPI
+  - IO::ScalarArray
+  - Text::CSV
+  - List::MoreUtils
+  - Getopt::Long::Descriptive
+  - Term::ReadKey
