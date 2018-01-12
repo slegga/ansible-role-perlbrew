@@ -31,3 +31,4 @@ perlmodules:
   - List::MoreUtils
   - Getopt::Long::Descriptive
   - Term::ReadKey
+  - Carp::Always
