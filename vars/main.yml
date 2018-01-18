@@ -26,6 +26,9 @@ perlmodules:
   - Getopt::Long::Descriptive
   - Term::ReadKey
   - Carp::Always
+  - Test::Script
+  - utf8::all
+  - Text::CSV 
 perlforcemodules:
   - List::MoreUtils
   
