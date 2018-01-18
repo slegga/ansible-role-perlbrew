@@ -28,7 +28,16 @@ perlmodules:
   - Carp::Always
   - Test::Script
   - utf8::all
-  - Text::CSV 
+  - YAML::Tiny
+  - MIME::Parser
+  - Readonly
+  - Mojolicious::Plugin::OpenAPI
+  - IO::ScalarArray
+  - Text::CSV
+  - Getopt::Long::Descriptive
+  - Term::ReadKey
+  - Carp::Always
+ - Text::CSV 
 perlforcemodules:
   - List::MoreUtils
-  
+
