@@ -29,6 +29,7 @@ perlmodules:
   - Test::Script
   - utf8::all
   - YAML::Tiny
+  - YAML::XS
   - MIME::Parser
   - Readonly
   - Mojolicious::Plugin::OpenAPI
