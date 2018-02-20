@@ -37,7 +37,8 @@ perlmodules:
   - Getopt::Long::Descriptive
   - Term::ReadKey
   - Carp::Always
- - Text::CSV 
+  - Text::CSV
+  - App::githook_perltidy
 perlforcemodules:
   - List::MoreUtils
 
