@@ -40,6 +40,6 @@ perlmodules:
   - Carp::Always
   - Text::CSV
   - App::githook_perltidy
+  - ojo
 perlforcemodules:
   - List::MoreUtils
-
