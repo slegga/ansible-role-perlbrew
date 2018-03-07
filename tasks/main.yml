@@ -68,5 +68,5 @@
     #  with_nested:
   with_items: "{{ perlmodules }}"
 #    - "{{ perls }}"
-  become: true
-  become_user: "{{ perlbrew_user }}"
+#  become: true
+#  become_user: "{{ perlbrew_user }}"
