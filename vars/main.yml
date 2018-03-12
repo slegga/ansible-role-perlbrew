@@ -27,7 +27,6 @@ perlmodules:
   - Term::ReadKey
   - Carp::Always
   - Test::Script
-  - utf8::all
   - YAML::Tiny
   - YAML::XS
   - MIME::Parser
