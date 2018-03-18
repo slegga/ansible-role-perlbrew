@@ -40,5 +40,6 @@ perlmodules:
   - Text::CSV
   - App::githook_perltidy
   - ojo
+  - IPC::System::Simple
 perlforcemodules:
   - List::MoreUtils
