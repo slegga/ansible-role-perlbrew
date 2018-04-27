@@ -41,5 +41,7 @@ perlmodules:
   - App::githook_perltidy
   - ojo
   - IPC::System::Simple
+  - Mail::IMAPClient
 perlforcemodules:
   - List::MoreUtils
+  - Data::Printer
