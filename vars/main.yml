@@ -42,6 +42,9 @@ perlmodules:
   - ojo
   - IPC::System::Simple
   - Mail::IMAPClient
+  - Test::Pod
+  - Pod::Spell
+  - Pod::Coverage
 perlforcemodules:
   - List::MoreUtils
   - Data::Printer
