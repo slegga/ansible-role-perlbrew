@@ -45,6 +45,8 @@ perlmodules:
   - Test::Pod
   - Pod::Spell
   - Pod::Coverage
+  - Git
+  - Perl::Critic
 perlforcemodules:
   - List::MoreUtils
   - Data::Printer
