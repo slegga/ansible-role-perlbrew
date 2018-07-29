@@ -49,7 +49,7 @@
     with_items: "{{ perls }}"
     register: perlbrew_install_result
     failed_when: perlbrew_install_result.rc not in [0,2]
-    changed_when: perlbrew_install_result|success
+    changed_when: perlbrew_install_result is success
 
   environment:
     PERLBREW_ROOT: "{{ perlbrew_root }}"
