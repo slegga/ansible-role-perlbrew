@@ -50,3 +50,4 @@ perlforcemodules:
   - List::MoreUtils
   - Data::Printer
   - Perl::Critic
+  - Data::Printer
