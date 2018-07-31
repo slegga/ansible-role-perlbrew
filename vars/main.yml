@@ -46,6 +46,8 @@ perlmodules:
   - Pod::Spell
   - Pod::Coverage
   - Git
+  - Net::OpenSSH
+  - Math::Cartesian::Product
 perlforcemodules:
   - List::MoreUtils
   - Data::Printer
