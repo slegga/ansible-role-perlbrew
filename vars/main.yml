@@ -48,6 +48,7 @@ perlmodules:
   - Git
   - Net::OpenSSH
   - Math::Cartesian::Product
+  - Net::DNS
 perlforcemodules:
   - List::MoreUtils
   - Data::Printer
