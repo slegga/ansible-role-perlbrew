@@ -49,6 +49,10 @@ perlmodules:
   - Net::OpenSSH
   - Math::Cartesian::Product
   - Net::DNS
+  - Cpanel::JSON::XS
+  - IO::Socket::Socks
+  - IO::Socket::SSL
+  - Net::DNS::Native
 perlforcemodules:
   - List::MoreUtils
   - Data::Printer
