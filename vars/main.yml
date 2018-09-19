@@ -53,6 +53,10 @@ perlmodules:
   - IO::Socket::Socks
   - IO::Socket::SSL
   - Net::DNS::Native
+  - Encode::Locale
+  - Test::FailWarnings
+  - MIDI::ALSA
+  - Term::Screen
 perlforcemodules:
   - List::MoreUtils
   - Data::Printer
