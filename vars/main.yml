@@ -43,6 +43,7 @@ perlmodules:
   - IPC::System::Simple
   - Mail::IMAPClient
   - Test::Pod
+  - Test::Pod::Coverage
   - Pod::Spell
   - Pod::Coverage
   - Git
