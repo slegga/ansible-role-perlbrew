@@ -56,10 +56,11 @@ perlmodules:
   - Net::DNS::Native
   - Encode::Locale
   - Test::FailWarnings
-#  - MIDI::ALSA
   - Term::Screen
 perlforcemodules:
   - List::MoreUtils
   - Data::Printer
   - Perl::Critic
   - Data::Printer
+pianotrainer:
+  - MIDI::ALSA

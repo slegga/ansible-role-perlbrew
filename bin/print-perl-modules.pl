@@ -28,3 +28,9 @@ say "#installed with force";
 for my $val (@{$yaml->{perlforcemodules}}) { # utf8 AB before AA
 	say $val;
 }
+if (exists $yaml->{pianotrainer}) {
+	say "#only piano-trainer"
+	for my $val (@{$yaml->{pianotrainer}}) { # utf8 AB before AA
+		say $val;
+	}
+}
