@@ -56,7 +56,7 @@ perlmodules:
   - Net::DNS::Native
   - Encode::Locale
   - Test::FailWarnings
-  - MIDI::ALSA
+#  - MIDI::ALSA
   - Term::Screen
 perlforcemodules:
   - List::MoreUtils
