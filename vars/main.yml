@@ -64,3 +64,4 @@ perlforcemodules:
   - Data::Printer
 pianotrainer:
   - MIDI::ALSA
+  - File::Modified
