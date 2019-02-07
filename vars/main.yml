@@ -57,6 +57,7 @@ perlmodules:
   - Encode::Locale
   - Test::FailWarnings
   - Term::Screen
+  - Mojolicious::Plugin::Status
 perlforcemodules:
   - List::MoreUtils
   - Data::Printer
