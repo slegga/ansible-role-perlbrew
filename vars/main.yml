@@ -58,6 +58,7 @@ perlmodules:
   - Test::FailWarnings
   - Term::Screen
   - Mojolicious::Plugin::Status
+  - IO::Interactive
 perlforcemodules:
   - List::MoreUtils
   - Data::Printer
