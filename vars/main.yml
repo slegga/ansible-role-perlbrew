@@ -59,6 +59,7 @@ perlmodules:
   - Term::Screen
   - Mojolicious::Plugin::Status
   - IO::Interactive
+  - NetAddr::IP
 perlforcemodules:
   - List::MoreUtils
   - Data::Printer
