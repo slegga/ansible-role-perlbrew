@@ -60,6 +60,8 @@ perlmodules:
   - Mojolicious::Plugin::Status
   - IO::Interactive
   - NetAddr::IP
+  - DateTime::Format::MySQL
+  - Hash::Merge
 perlforcemodules:
   - List::MoreUtils
   - Data::Printer
