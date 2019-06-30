@@ -3,11 +3,8 @@
 
 - name: Install perlbrew deps from yum
   yum:
-    name: "{{ item }}"
+    name: ['bzip2', 'perl-Test-Pod']
     state: installed
-  with_items:
-    - bzip2
-    - perl-Test-Pod
   become: true
 
 - name: Install CentOS Development tools
