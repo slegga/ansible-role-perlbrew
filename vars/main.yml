@@ -19,7 +19,6 @@ perlmodules:
   - Git::Repository
   - NetAddr::IP
   - IO::Pty
-  - App::Ack
   - Mojolicious::Plugin::RemoteAddr
   - Clone
   - MIDI
@@ -68,6 +67,7 @@ perlforcemodules:
   - Data::Printer
   - Perl::Critic
   - Data::Printer
+  - App::Ack
 pianotrainer:
   - MIDI::ALSA
   - File::Modified
