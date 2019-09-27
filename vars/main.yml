@@ -18,7 +18,7 @@ perlmodules:
   - autodie
   - Git::Repository
   - NetAddr::IP
-  - IO:Pty
+  - IO::Pty
   - App::Ack
   - Mojolicious::Plugin::RemoteAddr
   - Clone
