@@ -62,6 +62,7 @@ perlmodules:
   - NetAddr::IP
   - DateTime::Format::MySQL
   - Hash::Merge
+  - Mojo::SQLite
 perlforcemodules:
   - List::MoreUtils
   - Data::Printer
