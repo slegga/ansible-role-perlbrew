@@ -63,6 +63,7 @@ perlmodules:
   - DateTime::Format::MySQL
   - Hash::Merge
   - Mojo::SQLite
+  - Mojolicious::Plugin::AccessLog
 perlforcemodules:
   - List::MoreUtils
   - Data::Printer
