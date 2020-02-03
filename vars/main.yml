@@ -64,6 +64,7 @@ perlmodules:
   - Hash::Merge
   - Mojo::SQLite
   - Mojolicious::Plugin::AccessLog
+  - App::cpanoutdated
 perlforcemodules:
   - List::MoreUtils
   - Data::Printer
