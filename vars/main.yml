@@ -65,6 +65,7 @@ perlmodules:
   - Mojo::SQLite
   - Mojolicious::Plugin::AccessLog
   - App::cpanoutdated
+  - Mojo::JWT
 perlforcemodules:
   - List::MoreUtils
   - Data::Printer
