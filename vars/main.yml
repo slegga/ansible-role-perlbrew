@@ -66,6 +66,7 @@ perlmodules:
   - Mojolicious::Plugin::AccessLog
   - App::cpanoutdated
   - Mojo::JWT
+  - Mojolicious::Plugin::OAuth2
 perlforcemodules:
   - List::MoreUtils
   - Data::Printer
