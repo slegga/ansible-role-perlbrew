@@ -68,6 +68,7 @@ perlmodules:
   - Mojo::JWT
   - Mojolicious::Plugin::OAuth2
   - UUID
+  - Mojolicious::Plugin::PODViewer
 perlforcemodules:
   - List::MoreUtils
   - Data::Printer
