@@ -78,3 +78,5 @@ perlforcemodules:
 pianotrainer:
   - MIDI::ALSA
   - File::Modified
+  - Test::Perl::Critic
+  - PPR
