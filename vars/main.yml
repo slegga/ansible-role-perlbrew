@@ -69,14 +69,37 @@ perlmodules:
   - Mojolicious::Plugin::OAuth2
   - UUID
   - Mojolicious::Plugin::PODViewer
+  - JSON
+  - inc::Module::Install
+  - Test::YAML::Valid
+  - DateTime::Format::Mail
+  - DateTime::Format::RFC3501
+  - Regexp::Common
+  - IO::Interactive::Tiny
+  - Net::Google::Drive::Simple
 perlforcemodules:
   - List::MoreUtils
   - Data::Printer
   - Perl::Critic
   - Data::Printer
   - App::Ack
-pianotrainer:
+  - Test::Perl::Critic
+  - Mojo::Feed
+locals:
   - MIDI::ALSA
   - File::Modified
-  - Test::Perl::Critic
   - PPR
+  - DateTime::Format::RFC3339
+  - XML::LibXML
+  - Net::EmptyPort
+  - Data::Compare
+  - MP3::Tag
+  - File::Flock::Tiny
+  - List::Flatten
+  - Browser::Open
+  - Text::CSV_XS
+  - XML::Hash
+  - StreamFinder::Apple
+#PERL5LIB=. cpanm --notest Crypt::SSLeay
+perl5lib:
+  - Crypt::SSLeay
