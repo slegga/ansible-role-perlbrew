@@ -100,6 +100,7 @@ locals:
   - Text::CSV_XS
   - XML::Hash
   - StreamFinder::Apple
+  - Const::Fast
   - Digest::MD5::File
 #PERL5LIB=. cpanm --notest Crypt::SSLeay
 perl5lib:
