@@ -1,17 +1,17 @@
 ---
 # tasks file for ansible-perlbrew/
 
-- name: Install perlbrew deps from yum
-  yum:
-    name: ['bzip2', 'perl-Test-Pod']
-    state: installed
+- name: Install perlbrew deps from apt
+  apt:
+    name: ['bzip2',  'uuid-dev', 'libssl-dev', 'libz-dev', 'libnet-ssleay-perl']
+    state: latest
   become: true
 
-- name: Install CentOS Development tools
-  yum:
-    name: "@Development tools"
-    state: installed
-  become: true
+# - name: Install CentOS Development tools
+  # apt:
+    # name: "@Development tools"
+    # state: installed
+  # become: true
 
 - name: Create perlbrew root
   file:
@@ -50,15 +50,52 @@
     environment:
       PERLBREW_ROOT: "{{ perlbrew_root }}"
 
+#  - name: Install perlbrew stable
+#    command: "{{ perlbrew_root }}/bin/perlbrew install stable -j {{ ansible_processor_vcpus + 1 }}"
+#    ignore_errors: yes
+
+  # - name: Install perlbrew stable
+    # command: "{{ perlbrew_root }}/bin/perlbrew switch stable"
+
 - name: Push perlbrew.sh
   template:
     src: perlbrew.sh
     dest: /etc/profile.d/perlbrew.sh
   become: true
 
+- name: copy init ssh_user
+  lineinfile:
+    line: PERLBREW_ROOT=~/perl5/perlbrew
+    path: "/home/{{ssh_user}}/.perlbrew/init"
+    create: yes
+
+- name: copy init www
+  lineinfile:
+    line: PERLBREW_ROOT=~/perl5/perlbrew
+    path: "/home/www/.perlbrew/init"
+    create: yes
+  become: true
+  become_user: www
+
+
+- name: source
+  lineinfile:
+    line: source ~/perl5/perlbrew/etc/bashrc
+    path: "/home/{{ssh_user}}/.bashrc"
+
 - name: install perl modules
-  cpanm:
-    name: "{{ item }}"
-    version: "999.9"
+  command: "/home/stein/git/perlbrew-cron/perlbrew-cron.sh /home/{{ssh_user}}/perl5/perlbrew/bin/cpanm {{item }}"
   with_items: "{{ perlmodules }}"
 
+  # cpanm:
+    # name: "{{ item }}"
+    # version: "999.9"
+  # with_items: "{{ perlmodules }}"
+
+#- name: Self run
+#  command: "/home/{{ssh_user}}/git/ansible-perlbrew/bin/install-all-perl-modules.pl"
+
+- name: ln -s /home/stein/perl5/perlbrew/etc/bashrc
+  command: "perlbrew init"
+  become: true
+  become_user: www

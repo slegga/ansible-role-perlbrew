@@ -52,7 +52,6 @@ perlmodules:
   - Net::DNS
   - Cpanel::JSON::XS
   - IO::Socket::Socks
-  - IO::Socket::SSL
   - Net::DNS::Native
   - Encode::Locale
   - Test::FailWarnings
@@ -76,7 +75,7 @@ perlmodules:
   - DateTime::Format::RFC3501
   - Regexp::Common
   - IO::Interactive::Tiny
-  - Net::Google::Drive::Simple
+#  - Net::Google::Drive::Simple
 perlforcemodules:
   - List::MoreUtils
   - Data::Printer

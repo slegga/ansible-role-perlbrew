@@ -3,9 +3,9 @@
 # It looks like perlbrew has hardcoded this.
 
 # defaults file for ansible-perlbrew/
-perlbrew_root: /opt/perl5
+perlbrew_root: /home/stein/perl5/perlbrew
 
-default_perl: perl-5.26.0
+default_perl: perl-5.32.0
 perls:
   - "{{ default_perl }}"
 
