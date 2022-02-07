@@ -13,89 +13,90 @@
     # state: installed
   # become: true
 
-- name: Create perlbrew root
-  file:
-    path: "{{ perlbrew_root }}"
-    state: directory
-    owner: "{{ perlbrew_user}}"
-    mode: 0755
-  become: true
+# - name: Create perlbrew root
+  # file:
+    # path: "{{ perlbrew_root }}"
+    # state: directory
+    # owner: "{{ perlbrew_user}}"
+    # mode: 0755
+  # become: true
 
-- name: Fetch perlbrew
-  get_url:
-    url: https://raw.githubusercontent.com/gugod/App-perlbrew/master/perlbrew-install
-    dest: "{{ perlbrew_root }}"
-
-- block:
-  - name: Install perlbrew
-    command: "bash {{ perlbrew_root }}/perlbrew-install"
-    args:
-      creates: "{{ perlbrew_root }}/bin/perlbrew"
-
-  - name: Install perlbrew cpanm
-    command: "{{ perlbrew_root }}/bin/perlbrew install-cpanm -j {{ ansible_processor_vcpus + 1 }}"
-    args:
-      creates: "{{ perlbrew_root }}/bin/cpanm"
-
-  - name: Install perlbrew perls
-    command: |
-      {{ perlbrew_root }}/bin/perlbrew install
-      -j {{ ansible_processor_vcpus + 1 }}
-      {{ perlbrew_notest | ternary('--notest','') }}
-      {{ item }}
-    with_items: "{{ perls }}"
-    register: perlbrew_install_result
-    failed_when: perlbrew_install_result.rc not in [0,2]
-    changed_when: perlbrew_install_result is success
-    environment:
-      PERLBREW_ROOT: "{{ perlbrew_root }}"
-
-#  - name: Install perlbrew stable
-#    command: "{{ perlbrew_root }}/bin/perlbrew install stable -j {{ ansible_processor_vcpus + 1 }}"
-#    ignore_errors: yes
-
-  # - name: Install perlbrew stable
-    # command: "{{ perlbrew_root }}/bin/perlbrew switch stable"
-
-- name: Push perlbrew.sh
-  template:
-    src: perlbrew.sh
-    dest: /etc/profile.d/perlbrew.sh
-  become: true
-
-- name: copy init ssh_user
-  lineinfile:
-    line: PERLBREW_ROOT=~/perl5/perlbrew
-    path: "/home/{{ssh_user}}/.perlbrew/init"
-    create: yes
-
-- name: copy init www
-  lineinfile:
-    line: PERLBREW_ROOT=~/perl5/perlbrew
-    path: "/home/www/.perlbrew/init"
-    create: yes
-  become: true
-  become_user: www
-
-
-- name: source
-  lineinfile:
-    line: source ~/perl5/perlbrew/etc/bashrc
-    path: "/home/{{ssh_user}}/.bashrc"
+# - name: Fetch perlbrew
+  # get_url:
+    # url: https://raw.githubusercontent.com/gugod/App-perlbrew/master/perlbrew-install
+    # dest: "{{ perlbrew_root }}"
+#
+# - block:
+  # - name: Install perlbrew
+    # command: "bash {{ perlbrew_root }}/perlbrew-install"
+    # args:
+      # creates: "{{ perlbrew_root }}/bin/perlbrew"
+#
+  # - name: Install perlbrew cpanm
+    # command: "{{ perlbrew_root }}/bin/perlbrew install-cpanm -j {{ ansible_processor_vcpus + 1 }}"
+    # args:
+      # creates: "{{ perlbrew_root }}/bin/cpanm"
+#
+  # - name: Install perlbrew perls
+    # command: |
+      # {{ perlbrew_root }}/bin/perlbrew install
+      # -j {{ ansible_processor_vcpus + 1 }}
+      # {{ perlbrew_notest | ternary('--notest','') }}
+      # {{ item }}
+    # with_items: "{{ perls }}"
+    # register: perlbrew_install_result
+    # failed_when: perlbrew_install_result.rc not in [0,2]
+    # changed_when: perlbrew_install_result is success
+    # environment:
+      # PERLBREW_ROOT: "{{ perlbrew_root }}"
+#
+# #  - name: Install perlbrew stable
+# #    command: "{{ perlbrew_root }}/bin/perlbrew install stable -j {{ ansible_processor_vcpus + 1 }}"
+# #    ignore_errors: yes
+#
+  # # - name: Install perlbrew stable
+    # # command: "{{ perlbrew_root }}/bin/perlbrew switch stable"
+#
+# - name: Push perlbrew.sh
+  # template:
+    # src: perlbrew.sh
+    # dest: /etc/profile.d/perlbrew.sh
+  # become: true
+#
+# - name: copy init ssh_user
+  # lineinfile:
+    # line: PERLBREW_ROOT=~/perl5/perlbrew
+    # path: "/home/{{ssh_user}}/.perlbrew/init"
+    # create: yes
+#
+# - name: copy init www
+  # lineinfile:
+    # line: PERLBREW_ROOT=~/perl5/perlbrew
+    # path: "/home/www/.perlbrew/init"
+    # create: yes
+  # become: true
+  # become_user: www
+#
+#
+# - name: source
+  # lineinfile:
+    # line: source ~/perl5/perlbrew/etc/bashrc
+    # path: "/home/{{ssh_user}}/.bashrc"
+#
 
 - name: install perl modules
-  command: "/home/stein/git/perlbrew-cron/perlbrew-cron.sh /home/{{ssh_user}}/perl5/perlbrew/bin/cpanm {{item }}"
+#  command: "/home/stein/git/perlbrew-cron/perlbrew-cron.sh /home/{{ssh_user}}/perl5/perlbrew/bin/cpanm {{item }}"
+#  with_items: "{{ perlmodules }}"
+  cpanm:
+    name: "{{ item }}"
+    version: "999.9"
   with_items: "{{ perlmodules }}"
-
-  # cpanm:
-    # name: "{{ item }}"
-    # version: "999.9"
-  # with_items: "{{ perlmodules }}"
+  become: true
 
 #- name: Self run
 #  command: "/home/{{ssh_user}}/git/ansible-perlbrew/bin/install-all-perl-modules.pl"
 
-- name: ln -s /home/stein/perl5/perlbrew/etc/bashrc
-  command: "perlbrew init"
-  become: true
-  become_user: www
+# - name: ln -s /home/stein/perl5/perlbrew/etc/bashrc
+  # command: "perlbrew init"
+  # become: true
+  # become_user: www
