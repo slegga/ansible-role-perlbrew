@@ -1,6 +1,7 @@
 ---
 # vars file for ansible-perlbrew/
 perlmodules:
+  - Const::Fast
   - Digest::MD5
   - Compress::Raw::Zlib
   - EV
