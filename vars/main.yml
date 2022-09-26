@@ -1,6 +1,7 @@
 ---
 # vars file for ansible-perlbrew/
 perlmodules:
+  - OAuth::Cmdline::GoogleDrive
   - Const::Fast
   - Digest::MD5
   - Compress::Raw::Zlib
@@ -102,6 +103,8 @@ locals:
   - StreamFinder::Apple
   - Const::Fast
   - Digest::MD5::File
+  - Tk
+  - Devel:ptkdb
 #PERL5LIB=. cpanm --notest Crypt::SSLeay
 perl5lib:
   - Crypt::SSLeay
