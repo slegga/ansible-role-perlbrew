@@ -81,6 +81,7 @@ perlmodules:
 #  - Net::Google::Drive::Simple
   - PPR
   - File::MMagic
+  - TAP::Harness::Archive
 perlforcemodules:
   - List::MoreUtils
   - Data::Printer
