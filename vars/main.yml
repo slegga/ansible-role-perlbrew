@@ -104,7 +104,7 @@ locals:
   - Const::Fast
   - Digest::MD5::File
   - Tk
-  - Devel:ptkdb
+  - Devel::ptkdb
 #PERL5LIB=. cpanm --notest Crypt::SSLeay
 perl5lib:
   - Crypt::SSLeay

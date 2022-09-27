@@ -34,3 +34,10 @@ if (exists $yaml->{pianotrainer}) {
 		say $val;
 	}
 }
+
+if ($ARGV[0] eq 'local') {
+    say "#install local";
+    for my $val (@{$yaml->{locals}}) { # utf8 AB before AA
+    	say $val;
+    }
+}
