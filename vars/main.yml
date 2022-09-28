@@ -113,6 +113,7 @@ locals:
   - Tickit::Widget::Menu
   - Tie::IxHash
   - XML::Writer
+  - Encoding::FixLatin
 #PERL5LIB=. cpanm --notest Crypt::SSLeay
 perl5lib:
   - Crypt::SSLeay
