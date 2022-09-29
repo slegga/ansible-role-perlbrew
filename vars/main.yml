@@ -105,6 +105,8 @@ locals:
   - Digest::MD5::File
   - Tk
   - Devel::ptkdb
+  - Kwalify
+  - Tickit::ContainerWidget
 #PERL5LIB=. cpanm --notest Crypt::SSLeay
 perl5lib:
   - Crypt::SSLeay
