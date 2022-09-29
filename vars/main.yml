@@ -77,7 +77,11 @@ perlmodules:
   - DateTime::Format::RFC3501
   - Regexp::Common
   - IO::Interactive::Tiny
+  - Kwalify
 #  - Net::Google::Drive::Simple
+  - PPR
+  - File::MMagic
+  - TAP::Harness::Archive
 perlforcemodules:
   - List::MoreUtils
   - Data::Printer
@@ -89,7 +93,6 @@ perlforcemodules:
 locals:
   - MIDI::ALSA
   - File::Modified
-  - PPR
   - DateTime::Format::RFC3339
   - XML::LibXML
   - Net::EmptyPort
@@ -106,7 +109,12 @@ locals:
   - Tk
   - Devel::ptkdb
   - Kwalify
+  - Text::Aspell
   - Tickit::ContainerWidget
+  - Tickit::Widget::Menu
+  - Tie::IxHash
+  - XML::Writer
+  - Encoding::FixLatin
 #PERL5LIB=. cpanm --notest Crypt::SSLeay
 perl5lib:
   - Crypt::SSLeay
