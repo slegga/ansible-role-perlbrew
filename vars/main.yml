@@ -1,5 +1,5 @@
 ---
-# vars file for ansible-perlbrew/
+# vars file for ansible-role-perlbrew/
 perlmodules:
   - OAuth::Cmdline::GoogleDrive
   - Const::Fast

@@ -2,10 +2,10 @@
 # some how I cant manage to change from /opt/perl5 library.
 # It looks like perlbrew has hardcoded this.
 
-# defaults file for ansible-perlbrew/
+# defaults file for ansible-role-perlbrew/
 perlbrew_root: ~/perl5/perlbrew
 
-default_perl: perl-5.32.0
+default_perl: perl-5.34.0
 perls:
   - "{{ default_perl }}"
 

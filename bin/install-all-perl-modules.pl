@@ -49,7 +49,7 @@ option 'dryrun!', 'Print to screen instead of doing changes';
 
 sub main {
     my $self = shift;
-    my $yaml = CPAN::Meta::YAML::LoadFile("$ENV{HOME}/git/ansible-perlbrew/vars/main.yml");
+    my $yaml = CPAN::Meta::YAML::LoadFile("$ENV{HOME}/git/ansible-role-perlbrew/vars/main.yml");
     for my $val (@{$yaml->{perlmodules}}) {
     	say `cpanm $val`;
     }
