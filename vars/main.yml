@@ -82,6 +82,7 @@ perlmodules:
   - PPR
   - File::MMagic
   - TAP::Harness::Archive
+  - Tie::IxHash
 perlforcemodules:
   - List::MoreUtils
   - Data::Printer
