@@ -91,6 +91,7 @@ perlforcemodules:
   - App::Ack
   - Test::Perl::Critic
   - Mojo::Feed
+  - Git::Repository
 locals:
   - MIDI::ALSA
   - File::Modified
