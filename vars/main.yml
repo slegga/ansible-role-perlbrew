@@ -83,6 +83,12 @@ perlmodules:
   - File::MMagic
   - TAP::Harness::Archive
   - Tie::IxHash
+  - XML::DOM
+  - MP3::Tag
+  - StreamFinder::Apple
+  - Applify
+  - Digest::MD5::File
+  - LWP::Protocol::https
 perlforcemodules:
   - List::MoreUtils
   - Data::Printer
