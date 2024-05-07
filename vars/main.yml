@@ -89,6 +89,7 @@ perlmodules:
   - Applify
   - Digest::MD5::File
   - LWP::Protocol::https
+  - Expect
 perlforcemodules:
   - List::MoreUtils
   - Data::Printer
