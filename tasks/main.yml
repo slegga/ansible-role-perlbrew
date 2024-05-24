@@ -3,7 +3,7 @@
 
 - name: Install perlbrew deps from apt
   apt:
-    name: ['bzip2',  'uuid-dev', 'libssl-dev', 'libz-dev', 'libnet-ssleay-perl']
+    name: ['bzip2',  'uuid-dev', 'libssl-dev', 'libz-dev', 'libnet-ssleay-perl', 'libexpat1-dev']
     state: latest
   become: true
 
