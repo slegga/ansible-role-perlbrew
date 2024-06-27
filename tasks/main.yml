@@ -8,9 +8,8 @@
   become: true
 
 - name: install perl modules
-  cpanm:
+  community.general.cpanm:
     name: "{{ item }}"
-    version: "999.9"
   with_items: "{{ perlmodules }}"
   become: true
 
