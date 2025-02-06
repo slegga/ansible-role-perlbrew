@@ -91,6 +91,7 @@ perlmodules:
   - LWP::Protocol::https
   - Expect
 perlforcemodules:
+  - Net::SSLeay
   - List::MoreUtils
   - Data::Printer
   - Perl::Critic
